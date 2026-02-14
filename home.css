@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #9370DB, #2a2aff);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 200vh; /* يخلي الصفحة طويلة مرتين ارتفاع الشاشة */
+    padding-top: 150px;  /* مساحة فوق العداد */
+    padding-bottom: 150px; /* مساحة تحت العداد */
+}
+
+
+/* القلوب الطائرة */
+.hearts span {
+    position: absolute;
+    bottom: -50px;
+    font-size: 30px;
+    animation: float 5s linear infinite;
+}
+.hearts span:nth-child(1) { left: 10%; animation-duration: 6s; }
+.hearts span:nth-child(2) { left: 30%; animation-duration: 8s; }
+.hearts span:nth-child(3) { left: 50%; animation-duration: 5s; }
+.hearts span:nth-child(4) { left: 70%; animation-duration: 7s; }
+.hearts span:nth-child(5) { left: 90%; animation-duration: 9s; }
+
+@keyframes float {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+/* Navbar عايم */
+.navbar {
+    position: fixed;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    padding: 15px 30px;
+    border-radius: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    z-index: 1000;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
+.navbar a:hover::after { width: 100%; }
+
+/* Hero Section */
+.hero {
+    margin-top: 100px;
+    text-align: center;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+}
+
+/* محتوى إضافي */
+.content {
+    margin-top: 50px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+/* العداد */
+.timer-wrapper {
+    text-align: center;
+    position: relative; /* للتحكم في الارتفاع */
+    top: 500px; /* تحرك العداد للأسفل بحرية */
+}
+
+.main-title {
+    font-size: 36px;
+    color: white;
+    margin: 10px 0 5px 0;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+}
+
+.sub-title {
+    font-size: 18px;
+    color: #f0e6ff;
+    margin: 0 0 30px 0;
+}
+
+.timer-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* مسافة واسعة بين البوكسات */
+    flex-wrap: wrap;
+}
+
+.time-box {
+    background-color: white;
+    padding: 20px 25px;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 90px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.time-box:hover { transform: scale(1.1); }
+
+.time-box span {
+    display: block;
+    font-size: 32px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.time-box p {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+}
+
+.footer-text {
+    margin-top: 30px;
+    font-size: 18px;
+    color: white;
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+}
+.video-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 800px;
+    margin-bottom: 100px;
+}
+
+.video-section video {
+    width: 320px; /* مناسب لفيديو بالطول */
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+

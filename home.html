@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    
+    <!-- القلوب الطائرة -->
+    <div class="hearts">
+        <span>❤️</span>
+        <span>❤️</span>
+        <span>❤️</span>
+        <span>❤️</span>
+        <span>❤️</span>
+    </div>
+
+    <!-- Navbar عايم -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="our-photos.html">Gallery</a></li>
+            <li><a href="reasons.html">Reasons</a></li>
+            <li><a href="message.html">Message</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Welcome Back, Nona ❤️✨</h1>
+    </header>
+
+    <!-- محتوى إضافي -->
+    <div class="content">
+        <p>Enjoy Your Gift ❤️</p>
+    </div>
+
+    <!-- العداد مع الجمل -->
+    <div class="timer-wrapper">
+        <h1 class="main-title">Time Since Our First Talk ❤️</h1>
+        <p class="sub-title">Since The Day you Became my Girlfriend</p>
+
+        <div class="timer-container">
+            <div class="time-box">
+                <span id="days">0</span>
+                <p>Days</p>
+            </div>
+            <div class="time-box">
+                <span id="hours">0</span>
+                <p>Hours</p>
+            </div>
+            <div class="time-box">
+                <span id="minutes">0</span>
+                <p>Minutes</p>
+            </div>
+            <div class="time-box">
+                <span id="seconds">0</span>
+                <p>Seconds</p>
+            </div>
+        </div>
+
+        <p class="footer-text">Every second with you has been a blessing! ❤️</p>
+    </div>
+</div>  <!-- نهاية timer-wrapper -->
+
+<section class="video-section">
+    <video 
+        src="videos/h-n.mp4" 
+        autoplay 
+        muted 
+        loop 
+        playsinline>
+    </video>
+</section>
+
+
+    <!-- Spacer للتحكم في موقع العداد -->
+    <div style="height: 200px;"></div>
+
+    <!-- JavaScript العداد -->
+    <script>
+        function updateTimer() {
+            const startDate = new Date("2024-04-24T00:00:00");
+            const now = new Date();
+            const diff = now - startDate;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+        }
+
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
+</body>
+</html>
