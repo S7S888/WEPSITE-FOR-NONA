@@ -1,0 +1,146 @@
+body {
+  padding: 0;
+  background-color: #f9f9f9;
+   font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #9370DB, #2a2aff);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* يخلي الصفحة طويلة مرتين ارتفاع الشاشة */
+    padding-top: 150px;  /* مساحة فوق العداد */
+    padding-bottom: 150px; /* مساحة تحت العداد */
+}
+
+
+/* Navbar عايم */
+.navbar {
+    position: fixed;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    padding: 15px 30px;
+    border-radius: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    z-index: 1000;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
+.navbar a:hover::after { width: 100%; }
+.message{
+    font-family: Arial, sans-serif;
+    color: white;
+font-size: 48px;
+font-weight: bold;
+}
+
+
+
+
+
+
+
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* الأقسام اللي فيها 3 صور */
+.three-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.three-images img {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.three-images img:hover {
+  transform: scale(1.05);
+}
+
+/* القسم الثالث: شبكة الصور */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 صور في الصف */
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.image-grid img {
+  width: 300PX;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.image-grid img:hover {
+  transform: scale(1.05);
+}
+
+
+.CATS{
+    color: white;
+}
+.BABIES{
+    color: white;
+}
+.ME{
+    color: white;
+}

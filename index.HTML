@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<link rel="stylesheet" href="index.CSS">
+    </head>
+    <body>
+
+    <div class="hearts">
+        <span>❤️</span>
+        <span>❤️</span>
+        <span>❤️</span>
+        <span>❤️</span>
+        <span>❤️</span>
+    </div>
+    
+<div class="welcome-text">
+    <h1>Hi Nona! type the password to open your gift &#128522;❤️</h1>
+</div>
+
+
+
+
+<div class="fpass">
+    <p class="pass">
+        Password...
+    </p>
+
+    <input type="password" id="password" placeholder="...">
+
+    <button onclick="checkPassword()"> Enter </button>
+ <p class="error-message" id="error"></p>
+    <p class="hint"> hint... special date &#129325;</p>
+</div>
+
+
+
+
+<script>
+function checkPassword() {
+
+    let userPassword = document.getElementById("password").value;
+    let error = document.getElementById("error");
+
+    if (userPassword === "2442024") {
+        window.location.href = "home.html";
+    } else {
+        error.innerText = " ❤️ ركزي يا عجله البحر";
+        error.style.opacity = "1";
+    }
+}
+</script>
+    </body>
+</html>
